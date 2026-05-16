@@ -1,0 +1,12 @@
+Pauli matrices used in the proposed detector
+
+I = [1 0; 0 1]
+X = [0 1; 1 0]  -> mixer gate in QAOA
+Y = [0 -i; i 0] -> not required for BPSK Ising cost, useful in general quantum operations
+Z = [1 0; 0 -1] -> maps BPSK symbol +1/-1 to qubit eigenvalues
+
+Cost Hamiltonian for reduced uncertain set U:
+H_C = sum_i h_i Z_i + sum_{i<j} J_ij Z_i Z_j
+
+Mixer Hamiltonian:
+H_M = sum_i X_i
